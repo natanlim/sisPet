@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Pets</h1>
+<h1>Listagem de Pets</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Name</th>
@@ -20,9 +20,9 @@
         <td><%= pet.species %></td>
         <td><%= pet.breed %></td>
         <td><%= pet.obs %></td>
-        <td><%= link_to 'Show', pet %></td>
-        <td><%= link_to 'Edit', edit_pet_path(pet) %></td>
-        <td><%= link_to 'Destroy', pet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Listar', pet %></td>
+        <td><%= link_to 'Editar', edit_pet_path(pet) %></td>
+        <td><%= link_to 'Excluir', pet, method: :delete, data: { confirm: 'Deseja Excluir?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Pet', new_pet_path %>
+<%= link_to 'Novo Pet', new_pet_path %>
