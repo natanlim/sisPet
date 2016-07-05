@@ -1,6 +1,6 @@
 Sistema Pet Básico
 
-Cliente (Nome, Email, Telefone + Endereço"eested_attributes")
+Cliente (Nome, Email, Telefone + Endereço"nested_attributes")
 
 Pet(Nome, especie, raça, obs)
 
