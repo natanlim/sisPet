@@ -1,28 +1,15 @@
-== README
+Sistema Pet Básico
+Cliente (Nome, Email, Telefone + Endereço"eested_attributes")
+Pet(Nome, especie, raça, obs)
+Produtos(Nome, descrição, preço, foto)
+Atendimento(descrição, cliente, preço do atendimento, pet, produto"Caso haja", obs)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Autenticação de usuário + cadastro
+Cadastro Clientes
+Cadastro Pets
+(Cliente 1 : n Pet)
+Cadastro de produtos
+Cadastro de Visitas(atendimento) dos pets
+Atendimento (contém: Pet, cliente e pode conter produtos)
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Página Inicial contém últimos atendimentos feitos, mostrando: data, cliente e pet.
