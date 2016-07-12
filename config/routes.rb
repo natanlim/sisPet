@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :addresses
+  resources :customers
   resources :products
   get 'pages/home'
 
