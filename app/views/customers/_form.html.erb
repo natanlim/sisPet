@@ -23,6 +23,16 @@
     <%= f.label :email %><br>
     <%= f.text_field :email %>
   </div>
+  <%= f.fields_for :address do |ff| %>
+  <div class="field">
+    <%= ff.label :street %><br>
+    <%= ff.text_field :street %>
+  </div>
+  <div class="field">
+    <%= ff.label :zip %><br>
+    <%= ff.text_field :zip %>
+  </div>
+  <% end %>
   <div class="actions">
     <%= f.submit %>
   </div>
