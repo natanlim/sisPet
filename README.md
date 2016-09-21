@@ -1,15 +1,10 @@
-
- - Write Tests
- - Rethink Github Save
- - Add Code Comments
- - Add Night Mode
 ### Sistema Pet Básico
 
- - Cliente (Nome, Email, Telefone + Endereço"nested_attributes")
+ :white_check_mark: Cliente (Nome, Email, Telefone + Endereço"nested_attributes")
 
- - Pet(Nome, especie, raça, obs)
+ :white_check_mark: Pet(Nome, especie, raça, obs)
 
- - Produtos(Nome, descrição, preço, foto)
+ :white_check_mark: Produtos(Nome, descrição, preço, foto)
 
  - Atendimento(descrição, cliente, preço do atendimento, pet, produto"Caso haja", obs)
 
