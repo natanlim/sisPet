@@ -27,6 +27,10 @@
     <%= f.label :obs %><br>
     <%= f.text_field :obs %>
   </div>
+  <div class="table table-striped">
+    <%= f.label :customer_id %><br>
+    <%= f.collection_select(:customer_id, Customer.all, :id, :name, include_blank: true) %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

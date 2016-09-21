@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160712015225) do
+ActiveRecord::Schema.define(version: 20160921202515) do
 
   create_table "addresses", force: :cascade do |t|
     t.string   "street"
@@ -36,9 +36,12 @@ ActiveRecord::Schema.define(version: 20160712015225) do
     t.string   "species"
     t.string   "breed"
     t.string   "obs"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "customer_id"
   end
+
+  add_index "pets", ["customer_id"], name: "index_pets_on_customer_id"
 
   create_table "products", force: :cascade do |t|
     t.string   "description"
@@ -50,5 +53,28 @@ ActiveRecord::Schema.define(version: 20160712015225) do
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
   end
+
+  create_table "relationships", force: :cascade do |t|
+    t.integer  "service_id"
+    t.integer  "product_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "relationships", ["product_id"], name: "index_relationships_on_product_id"
+  add_index "relationships", ["service_id"], name: "index_relationships_on_service_id"
+
+  create_table "services", force: :cascade do |t|
+    t.text     "description"
+    t.integer  "client_id"
+    t.decimal  "price"
+    t.integer  "pet_id"
+    t.text     "obs"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "services", ["client_id"], name: "index_services_on_client_id"
+  add_index "services", ["pet_id"], name: "index_services_on_pet_id"
 
 end

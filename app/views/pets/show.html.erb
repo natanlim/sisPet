@@ -20,6 +20,11 @@
   <%= @pet.obs %>
 </p>
 
+<p>
+  <strong>Cliente:</strong>
+  <%= @pet.customer.name %>
+</p>
+
 
 
 <%= link_to 'Editar', edit_pet_path(@pet) %> |

@@ -1,5 +1,6 @@
 class PetsController < ApplicationController
   before_action :set_pet, only: [:show, :edit, :update, :destroy]
+  before_action :set_customers, only: [:create, :edit]
 
   # GET /pets
   # GET /pets.json
@@ -69,6 +70,10 @@ class PetsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pet_params
-      params.require(:pet).permit(:name, :species, :breed, :obs)
+      params.require(:pet).permit(:name, :species, :breed, :obs, :customer_id)
+    end
+    def set_customers
+      @customers = Customer.all
+      
     end
 end

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: MyText
+  client_id: 
+  price: 9.99
+  pet_id: 
+  obs: MyText
+
+two:
+  description: MyText
+  client_id: 
+  price: 9.99
+  pet_id: 
+  obs: MyText
