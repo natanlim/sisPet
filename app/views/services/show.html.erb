@@ -4,30 +4,22 @@
   <strong>Description:</strong>
   <%= @service.description %>
 </p>
-
-<p>
-  <strong>Cliente:</strong>
-  <%= @service.customer.name %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @service.price %>
-</p>
-
 <p>
   <strong>Pet:</strong>
   <%= @service.pet.name %>
 </p>
-
+<p>
+  <strong>Price:</strong>
+  <%= @service.price %>
+</p>
+<p> <strong>Product:</strong>
+<% @service.products.each do |p| %>
+          <%= p.description%>
+          <% end  %>
+</p>
 <p>
   <strong>Obs:</strong>
   <%= @service.obs %>
-</p>
-
-<p>
-  <strong>Product:</strong>
-  <%= @service.product.description %>
 </p>
 
 <%= link_to 'Edit', edit_service_path(@service) %> |

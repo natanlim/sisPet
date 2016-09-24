@@ -15,10 +15,7 @@
     <%= f.label :description %><br>
     <%= f.text_area :description %>
   </div>
-  <div class="table table-striped">
-    <%= f.label :customer_id %><br>
-    <%= f.collection_select(:customer_id, Customer.all, :id, :name, include_blank: true) %>
-  </div>
+  
   <div class="field">
     <%= f.label :price %><br>
     <%= f.text_field :price %>
@@ -32,8 +29,8 @@
     <%= f.text_area :obs %>
   </div>
   <div class="table table-striped">
-    <%= f.label :product_id %><br>
-    <%= f.collection_select(:product_id, Product.all, :id, :description, include_blank: true) %>
+    <%= f.label :produtos %><br>
+    <%= f.collection_check_boxes(:product_ids, Product.all, :id, :description) %>
   </div>
   <div class="actions">
     <%= f.submit %>
