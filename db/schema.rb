@@ -66,7 +66,7 @@ ActiveRecord::Schema.define(version: 20160921202515) do
 
   create_table "services", force: :cascade do |t|
     t.text     "description"
-    t.integer  "client_id"
+    t.integer  "customer_id"
     t.decimal  "price"
     t.integer  "pet_id"
     t.text     "obs"
@@ -74,7 +74,7 @@ ActiveRecord::Schema.define(version: 20160921202515) do
     t.datetime "updated_at",  null: false
   end
 
-  add_index "services", ["client_id"], name: "index_services_on_client_id"
+  add_index "services", ["customer_id"], name: "index_services_on_customer_id"
   add_index "services", ["pet_id"], name: "index_services_on_pet_id"
 
 end
