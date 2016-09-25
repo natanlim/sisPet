@@ -6,20 +6,20 @@
 
  :white_check_mark: Produtos(Nome, descrição, preço, foto)
 
- - Atendimento(descrição, cliente, preço do atendimento, pet, produto"Caso haja", obs)
+ :white_check_mark: Atendimento(descrição, cliente, preço do atendimento, pet, produto"Caso haja", obs)
 
  - Autenticação de usuário + cadastro
 
- - Cadastro Clientes
+ :white_check_mark: Cadastro Clientes
 
- - Cadastro Pets
+:white_check_mark: Cadastro Pets
 
- - (Cliente 1 : n Pet)
+ :white_check_mark: (Cliente 1 : n Pet)
 
- - Cadastro de produtos
+ :white_check_mark: Cadastro de produtos
 
- - Cadastro de Visitas(atendimento) dos pets
+ :white_check_mark: Cadastro de Visitas(serviço) dos pets
 
- - Atendimento (contém: Pet, cliente e pode conter produtos)
+:white_check_mark: serviço (contém: Pet, cliente e pode conter produtos)
 
  - Página Inicial contém últimos atendimentos feitos, mostrando: data, cliente e pet.
