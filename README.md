@@ -10,13 +10,13 @@
 
  - Autenticação de usuário + cadastro
 
- - Cadastro Clientes
+ :white_check_mark: Cadastro Clientes
 
- - Cadastro Pets
+ :white_check_mark: Cadastro Pets
 
- - (Cliente 1 : n Pet)
+ :white_check_mark: (Cliente 1 : n Pet)
 
- - Cadastro de produtos
+ :white_check_mark: Cadastro de produtos
 
  - Cadastro de Visitas(atendimento) dos pets
 
