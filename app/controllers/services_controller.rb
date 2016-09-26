@@ -1,5 +1,8 @@
 class ServicesController < ApplicationController
   before_action :set_service, only: [:show, :edit, :update, :destroy]
+  before_action :set_customers, only: [:create, :edit]
+  before_action :set_pets, only: [:create, :edit]
+  before_action :set_products, only: [:create, :edit]
 
   # GET /services
   # GET /services.json
@@ -69,6 +72,17 @@ class ServicesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def service_params
-      params.require(:service).permit(:description, :client_id, :price, :pet_id, :obs)
+      params.require(:service).permit(:description, :customer_id, :price, :pet_id, :obs, product_ids: [])
+    end
+    def set_customers
+      @customers = Customer.all      
+    end
+    
+    def set_pets
+      @pets = Pet.all      
+    end
+
+    def set_products
+      @products = Product.all     
     end
 end
