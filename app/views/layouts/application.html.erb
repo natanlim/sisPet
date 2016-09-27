@@ -27,12 +27,23 @@
                         <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        <li>
+                            <%= link_to new_user_session_path do %>
+                            <i class="fa fa-user fa-fw"></i>Entrar
+                            <% end %>
                         </li>
-                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        <li>
+                            <%= link_to new_user_registration_path do %>
+                            <i class="fa fa-plus fa-fw"></i>Cadastrar
+                            <% end %>
                         </li>
+                        <% if user_signed_in? %>
+                        <i class="fa fa-spinner fa-fw"></i><%= current_user.email%>
+                        <% end %>
                         <li class="divider"></li>
-                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                            <%= link_to destroy_user_session_path, method: :delete do %>
+                            <i class="fa fa-sign-out fa-fw"></i>Sair
+                            <% end %>
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->

@@ -3,7 +3,7 @@ class ServicesController < ApplicationController
   before_action :set_customers, only: [:create, :edit]
   before_action :set_pets, only: [:create, :edit]
   before_action :set_products, only: [:create, :edit]
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:index]
 
   # GET /services
   # GET /services.json
